@@ -8,20 +8,20 @@
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-	binary_tree_t *binary_tree = NULL;
+	binary_tree_t *new_node = NULL;
 
 	if (parent == NULL)
 		return (NULL);
-	binary_tree = calloc(1, sizeof(binary_tree_t));
-	if (binary_tree == NULL)
+	new_node = calloc(1, sizeof(binary_tree_t));
+	if (new_node == NULL)
 		return (NULL);
-	binary_tree->parent = parent;
-	binary_tree->n = value;
+	new_node->parent = parent;
+	new_node->n = value;
 	if (parent->right != NULL)
 	{
-		binary_tree->right = parent->right;
-		binary_tree->right->parent = binary_tree;
+		new_node->right = parent->right;
+		new_node->right->parent = new_node;
 	}
-	parent->right = binary_tree;
-	return (binary_tree);
+	parent->right = new_node;
+	return (new_node);
 }
