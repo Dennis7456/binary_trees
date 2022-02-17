@@ -4,8 +4,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-
-
 /**
  * struct binary_tree_s - Tree node
  * @n: Integer stored in the node(weight)
@@ -13,7 +11,6 @@
  * @left: Pointer to left child node
  * @right: Pointer to right child node
  */
-
 struct binary_tree_s
 {
 	int n;
@@ -28,24 +25,11 @@ typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 
 
-/* Printing helper function */
+
 void binary_tree_print(const binary_tree_t *);
-
-
-/* Task 0 */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-
-
-/* Task 1 */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
-
-/* Task 2 */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
-/* Task 3 */
 void binary_tree_delete(binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
-
-
-
-
